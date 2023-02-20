@@ -17,7 +17,7 @@
 
 	<body>
 		<div id="info">
-		<a href="http://Quantego.org" target="_blank" rel="noopener">Quantego.org</a>
+		<a href="http://Quantego.org" target="_blank" rel="noopener">Quantego.org V3</a>
 		</div>
 
 		<!-- Import maps polyfill -->
@@ -267,12 +267,6 @@
 
 				gui = new GUI();
 
-				gui.add( guiData, 'modelFileName', modelFileList ).name( 'Model' ).onFinishChange( function () {
-
-					reloadObject( true );
-
-				} );
-
 				if ( model.userData.numBuildingSteps > 1 ) {
 
 					gui.add( guiData, 'buildingStep', 0, model.userData.numBuildingSteps - 1 ).step( 1 ).name( 'Building step' ).onChange( updateObjectsVisibility );
@@ -284,9 +278,7 @@
 				}
 
 
-				gui.add( guiData, 'displayLines' ).name( 'Display Lines' ).onChange( updateObjectsVisibility );
-				gui.add( guiData, 'conditionalLines' ).name( 'Conditional Lines' ).onChange( updateObjectsVisibility );
-
+			
 			}
 
 			//
