@@ -17,7 +17,7 @@
 
 	<body>
 		<div id="info">
-		<a href="http://Quantego.org" target="_blank" rel="noopener">Quantego.org</a> - Quantego.org
+		<a href="http://Quantego.org" target="_blank" rel="noopener">Quantego.org</a>
 		</div>
 
 		<!-- Import maps polyfill -->
@@ -273,18 +273,6 @@
 
 				} );
 
-				gui.add( guiData, 'flatColors' ).name( 'Flat Colors' ).onChange( function () {
-
-					reloadObject( false );
-
-				} );
-
-				gui.add( guiData, 'mergeModel' ).name( 'Merge model' ).onChange( function () {
-
-					reloadObject( false );
-
-				} );
-
 				if ( model.userData.numBuildingSteps > 1 ) {
 
 					gui.add( guiData, 'buildingStep', 0, model.userData.numBuildingSteps - 1 ).step( 1 ).name( 'Building step' ).onChange( updateObjectsVisibility );
@@ -295,11 +283,6 @@
 
 				}
 
-				gui.add( guiData, 'smoothNormals' ).name( 'Smooth Normals' ).onChange( function changeNormals() {
-
-					reloadObject( false );
-
-				} );
 
 				gui.add( guiData, 'displayLines' ).name( 'Display Lines' ).onChange( updateObjectsVisibility );
 				gui.add( guiData, 'conditionalLines' ).name( 'Conditional Lines' ).onChange( updateObjectsVisibility );
